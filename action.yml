@@ -27,3 +27,12 @@ runs:
         python $GITHUB_ACTION_PATH/src/main.py
       env:
         GITHUB_REPOSITORY: ${{ github.repository }}
+        ISSUE_TITLE : ${{ github.event.issue.title }}
+        ISSUE_NUMBER : ${{ github.event.issue.number }}
+        ISSUE_OWNER : ${{ github.event.issue.user.login }}
+
+    - name: Close Issue
+      uses: peter-evans/close-issue@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        comment: "Quack! Quack!"
