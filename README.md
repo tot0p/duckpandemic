@@ -21,6 +21,23 @@ And you need to have the following balise in your `README.md` file:
 
 ⚠️**WARNING**⚠️ : this action need Read and write permissions (Settings > Actions > General)
 
+## Example usage
+
+```yaml
+name : duck pandemic
+on:
+  push:
+    branches:
+      - main
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        steps:
+        - uses: actions/checkout@v3
+        - name: duck
+          uses: tot0p/duckpandemic@v1
+```
+
 ## Result
 
 <!--DUCK-->
