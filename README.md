@@ -19,16 +19,42 @@ And you need to have the following balise in your `README.md` file:
 <!--/DUCK-->
 ```
 
-⚠️**WARNING**⚠️ : this action need Read and write permissions (Settings > Actions > General)
+and add the md in your README.md file
+
+```markdown
+[Change the duck](https://github.com/username/projetname/issues/new?title=%F0%9F%A6%86%20Quack)
+```
+
+for the visitor can change the duck 🦆
+
+for example:
+
+```markdown
+<div align="center">
+<!--DUCK-->
+<!--/DUCK-->
+
+Submit the issue to change the duck
+
+> :warning: The duck will be changed only if the title is `🦆 Quack` :warning:
+
+
+[Change the duck](https://github.com/username/projetname/issues/new?title=%F0%9F%A6%86%20Quack)
+
+</div>
+```
+
+> the perfect markdown for the duck 🦆
+
+⚠️**WARNING**⚠️ : this action need Read and write permissions (Settings > Actions > General) and for initial setup you need to create a issue with the title `🦆 Quack` to init the duck
 
 ## Example usage
 
 ```yaml
 name : duck pandemic
 on:
-  push:
-    branches:
-      - main
+  issues:
+    types: [opened]
 jobs:
     build:
         runs-on: ubuntu-22.04
@@ -39,6 +65,15 @@ jobs:
 ```
 
 ## Result
-
+<div align="center">
 <!--DUCK-->
 <!--/DUCK-->
+
+Submit the issue to change the duck
+
+> :warning: The duck will be changed only if the title is `🦆 Quack` :warning:
+
+
+[Change the duck](https://github.com/tot0p/duckpandemic/issues/new?title=%F0%9F%A6%86%20Quack)
+
+</div>
