@@ -61,7 +61,7 @@ jobs:
         steps:
         - uses: actions/checkout@v3
         - name: duck
-          uses: tot0p/duckpandemic@v1
+          uses: tot0p/duckpandemic@v1.1.0
 ```
 
 ## Result
