@@ -68,8 +68,8 @@ jobs:
 <div align="center">
 
 <!--DUCK-->
-### Duck changed by [cheikhhhhh](https://github.com/cheikhhhhh)
-[![Duck](https://random-d.uk/api/69.jpg)](https://github.com/tot0p/duckpandemic/issues/new?title=%F0%9F%A6%86%20Quack)
+### Duck changed by [tot0p](https://github.com/tot0p)
+[![Duck](https://random-d.uk/api/42.gif)](https://github.com/tot0p/duckpandemic/issues/new?title=%F0%9F%A6%86%20Quack)
 <!--/DUCK-->
 
 Submit the issue to change the duck
