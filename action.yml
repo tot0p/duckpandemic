@@ -5,6 +5,12 @@ branding:
   icon: "feather"
   color: "yellow"
 
+inputs:
+  coauth:
+    description: "Co-authors to add to the commit message."
+    required: false
+    default: "true"
+
 runs:
   using : "composite"
   steps:
@@ -30,6 +36,7 @@ runs:
         ISSUE_TITLE : ${{ github.event.issue.title }}
         ISSUE_NUMBER : ${{ github.event.issue.number }}
         ISSUE_OWNER : ${{ github.event.issue.user.login }}
+        CO_AUTH : ${{ inputs.coauth }}
 
     - name: Close Issue
       uses: peter-evans/close-issue@v1

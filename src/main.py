@@ -7,6 +7,8 @@ magicTitle = "🦆 Quack"
 
 
 githubRepo = os.environ['GITHUB_REPOSITORY']
+coauth = os.environ['CO_AUTH'] == "true"
+
 
 
 DEL_START  ="<!--DUCK-->"
@@ -67,6 +69,8 @@ if __name__ == "__main__":
     os.system('git config --local user.name "github-actions[bot]"')
     os.system('git add .')
     os.system(f'git commit -m "🦆 Quack by @{os.environ["ISSUE_OWNER"]} #{os.environ["ISSUE_NUMBER"]}"')
+    if coauth:
+        os.system(f'git commit --amend --no-edit --author="{os.environ["ISSUE_OWNER"]} <{os.environ["ISSUE_OWNER"]}@users.noreply.github.com>"')
     os.system('git push')
 
 
