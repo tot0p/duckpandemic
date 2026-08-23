@@ -10,6 +10,10 @@ inputs:
     description: "Co-authors to add to the commit message."
     required: false
     default: "true"
+  counter:
+    description: "Display a quack counter badge under the duck."
+    required: false
+    default: "true"
 
 runs:
   using : "composite"
@@ -37,6 +41,7 @@ runs:
         ISSUE_NUMBER : ${{ github.event.issue.number }}
         ISSUE_OWNER : ${{ github.event.issue.user.login }}
         CO_AUTH : ${{ inputs.coauth }}
+        QUACK_COUNTER : ${{ inputs.counter }}
 
     - name: Close Issue
       uses: peter-evans/close-issue@v1

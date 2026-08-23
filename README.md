@@ -4,6 +4,15 @@ The aim of this project is to contaminated the world with ducks. (and dev readme
 
 This is a simple GitHub Action that will display duck image in your README.md file.
 
+## Inputs
+
+| Name | Description | Default |
+|------|-------------|---------|
+| `coauth` | Add the issue author as co-author of the commit. | `"true"` |
+| `counter` | Display a quack counter badge under the duck. | `"true"` |
+
+The quack counter is stored in a `<!--QUACKS:n-->` marker inside the duck block and is incremented on every quack.
+
 ## Outputs
 
 No outputs. The action will update the README.md file of the repository.
@@ -61,7 +70,7 @@ jobs:
         steps:
         - uses: actions/checkout@v3
         - name: duck
-          uses: tot0p/duckpandemic@v1.1.0
+          uses: tot0p/duckpandemic@v1.2.0
 ```
 
 ## Result
@@ -70,6 +79,9 @@ jobs:
 <!--DUCK-->
 ### Duck changed by [tot0p](https://github.com/tot0p)
 [![Duck](https://random-d.uk/api/42.gif)](https://github.com/tot0p/duckpandemic/issues/new?title=%F0%9F%A6%86%20Quack)
+<!--QUACKS:1-->
+
+![Quack counter](https://img.shields.io/badge/🦆_Quacks-1-yellow?style=for-the-badge)
 <!--/DUCK-->
 
 Submit the issue to change the duck
